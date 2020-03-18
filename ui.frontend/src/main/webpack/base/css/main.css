@@ -1282,7 +1282,7 @@ Slider
   .home-slider * {
     outline: none; }
   .home-slider--wrapper__inner {
-    min-height: 100vh;
+    min-height: 863px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

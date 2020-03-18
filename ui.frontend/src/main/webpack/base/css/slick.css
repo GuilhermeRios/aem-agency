@@ -46,7 +46,6 @@
 .slick-slide {
   float: left;
   height: 100%;
-  max-height: 863px;
   min-height: 1px;
   display: none; }
   [dir="rtl"] .slick-slide {

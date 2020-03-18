@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    jcr:title="Properties"
-    sling:resourceType="cq/gui/components/authoring/dialog">
-    <content
-        jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Properties"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
         <items jcr:primaryType="nt:unstructured">
-            <column
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
+            <column jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                    <tabs jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                          maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <slider jcr:primaryType="nt:unstructured"
+                                    jcr:title="Slides"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <slides jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            fieldDescription="Click 'Add new' to add a new Slide"
+                                            composite="{Boolean}true">
+                                        <field jcr:primaryType="nt:unstructured"
+                                               sling:resourceType="granite/ui/components/coral/foundation/container"
+                                               margin="{Boolean}true"
+                                               name="./slides">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <paragraph jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                           fieldLabel="Paragraph"
+                                                           name="./paragraph"/>
+                                                <title jcr:primaryType="nt:unstructured"
+                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                       fieldLabel="Title"
+                                                       required="{Boolean}true"
+                                                       name="./title"/>
+                                                <content jcr:primaryType="nt:unstructured"
+                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                         fieldLabel="Content"
+                                                         required="{Boolean}true"
+                                                         name="./content"/>
+                                                <background jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            fileNameParameter="./backgroundName"
+                                                            fileReferenceParameter="./backgroundRef"
+                                                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                            multiple="{Boolean}false"
+                                                            name="./background/file"
+                                                            title="Image"
+                                                            useHTML5="{Boolean}true"
+                                                            uploadUrl="${suffix.path}"
+                                                            required="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </slides>
+                                </items>
+                            </slider>
+                            <properties jcr:primaryType="nt:unstructured"
+                                        jcr:title="Properties"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <anchor jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            text="Show Anchor"
+                                            value="{Boolean}true"
+                                            uncheckedValue="{Boolean}false"
+                                            name="./anchor"/>
+                                </items>
+                            </properties>
+                        </items>
+                    </tabs>
                 </items>
             </column>
         </items>
     </content>
 </jcr:root>
-
