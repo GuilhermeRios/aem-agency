@@ -90,8 +90,7 @@ a, a:hover, button, button:hover, .btnborder, .btntop {
 
 .four-elements {
   text-align: center;
-  padding: 100px 0;
-  border-bottom: 1px solid #e5e5e5; }
+  padding: 100px 0; }
   .four-elements .col-md-3 {
     padding: 0 30px; }
     .four-elements .col-md-3 .four-elements--image {
