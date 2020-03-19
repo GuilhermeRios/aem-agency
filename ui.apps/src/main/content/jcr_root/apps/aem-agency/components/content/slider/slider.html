@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>
+        <sly data-sly-test="${slider.items.empty}" data-sly-call="${placeholder}"></sly>
         <div class="home-slider--nav">
             <div class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
             <div class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
@@ -25,4 +26,26 @@
             <span><i class="fa fa-anchor" aria-hidden="true"></i></span>
         </div>
     </div>
+
+</sly>
+<!--/*PLACEHOLDER TEMPLATE*/-->
+<sly data-sly-template.placeholder>
+    <sly data-sly-test="${wcmmode.edit || wcmmode.preview}">
+        <div class="home-slider--wrapper">
+            <div>
+                <div class="home-slider--wrapper__inner" style="background-image: url('assets/img/slider.jpg')">
+                    <div class="container">
+                        <h3>Lorem Ipsum is simply dummy text</h3>
+                        <h1>WELCOME TO PLACEHOLDER</h1>
+                        <span class="dot-dash">.</span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="slider-buttons">
+                            <a href="#" class="button">Get Started Now</a>
+                            <a href="#" class="button button-w">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sly>
 </sly>
