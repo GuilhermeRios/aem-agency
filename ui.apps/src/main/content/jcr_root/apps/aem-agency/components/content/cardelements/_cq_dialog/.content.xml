@@ -20,6 +20,10 @@
                              sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                              fieldLabel="Content"
                              name="./content"/>
+                    <icon jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                           fieldLabel="Font Awesome Icon"
+                           name="./icon"/>
                 </items>
             </column>
         </items>

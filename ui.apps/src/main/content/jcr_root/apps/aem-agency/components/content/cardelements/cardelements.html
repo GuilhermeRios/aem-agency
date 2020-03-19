@@ -1,5 +1,11 @@
-
-    <div class="four-elements--image"><i class="fa fa-eye" aria-hidden="true"></i></div>
+<sly data-sly-test="${properties.title && properties.content}">
+    <div class="four-elements--image"><i class="fa ${properties.icon}" aria-hidden="true"></i></div>
     <h3>${properties.title}</h3>
     <p>${properties.content}</p>
-
+</sly>
+<sly data-sly-test="${!properties.title && !properties.content && (wcmmode.edit || wcmmode.preview)}">
+    <div class="four-elements--image"><i class="fa fa-eye" aria-hidden="true"></i></div>
+    <h3>PLACEHOLDER</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam.</p>
+</sly>
