@@ -2,4 +2,8 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="cq:Component"
           jcr:title="Card - Elements"
-          componentGroup="Agency.Content"/>
+          componentGroup="Agency.Content">
+    <cq:htmlTag
+            jcr:primaryType="nt:unstructured"
+            class="col-md-3 col-sm-6 col-xs-12"/>
+</jcr:root>
