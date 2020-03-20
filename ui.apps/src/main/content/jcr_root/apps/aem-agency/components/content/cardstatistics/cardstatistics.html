@@ -1,0 +1,15 @@
+<sly data-sly-test="${properties.title}">
+    <div class="statistics--item">
+        <div class="statistics--item__image"><i class="fa ${properties.icon}"></i></div>
+        <h3 class="odometer"
+            data-counter="${properties.counter}">${wcmmode.edit || wcmmode.preview ? properties.counter : '0'}</h3>
+        <h5>${properties.title}</h5>
+    </div>
+</sly>
+<sly data-sly-test="${!properties.title && (wcmmode.edit || wcmmode.preview)}">
+    <div class="statistics--item">
+        <div class="statistics--item__image"><i class="fa fa-heart-o"></i></div>
+        <h3 class="odometer">0</h3>
+        <h5>Placeholder</h5>
+    </div>
+</sly>

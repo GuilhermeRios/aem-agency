@@ -430,7 +430,6 @@ a, a:hover, button, button:hover, .btnborder, .btntop {
 
 .statistics {
   padding: 140px 0;
-  background-image: url("../assets/img/slider.jpg");
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
@@ -446,10 +445,6 @@ a, a:hover, button, button:hover, .btnborder, .btntop {
     background: rgba(0, 0, 0, 0.5);
     z-index: 0; }
   .statistics--item {
-    position: relative;
-    z-index: 1;
-    float: left;
-    width: 20%;
     color: #ffffff;
     text-align: center; }
     .statistics--item__image {

@@ -142,13 +142,10 @@ Website by Websolute
 
         $('.odometer').each(function() {
             if ($(this).isInViewport()) {
-
+                var self = $(this);
+                var counter = $(this).attr('data-counter');
                 setTimeout(function(){
-                    $('.odometer.first').html(5142);
-                    $('.odometer.second').html(51);
-                    $('.odometer.third').html(422);
-                    $('.odometer.fourth').html(9870);
-                    $('.odometer.fifth').html(658);
+                    self.html(counter);
                 }, 0);
             } else {
             }
