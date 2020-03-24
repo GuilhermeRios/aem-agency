@@ -331,8 +331,7 @@ a, a:hover, button, button:hover, .btnborder, .btntop {
 
 .case-study {
   padding: 140px 0;
-  text-align: center;
-  background: #f4f5f9; }
+  text-align: center; }
   .case-study h2 {
     font: 600 36px/1 "Source Sans Pro";
     margin: 0 0 20px;

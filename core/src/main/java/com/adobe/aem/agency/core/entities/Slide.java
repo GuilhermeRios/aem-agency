@@ -5,6 +5,9 @@ public class Slide {
     private String paragraph;
     private String content;
     private String background;
+    private boolean showButton;
+    private String buttonText;
+    private String buttonLink;
 
     public String getTitle() {
         return title;
@@ -36,5 +39,29 @@ public class Slide {
 
     public void setBackground(String background) {
         this.background = background;
+    }
+
+    public boolean isShowButton() {
+        return showButton;
+    }
+
+    public void setShowButton(boolean showButton) {
+        this.showButton = showButton;
+    }
+
+    public String getButtonText() {
+        return buttonText;
+    }
+
+    public void setButtonText(String buttonText) {
+        this.buttonText = buttonText;
+    }
+
+    public String getButtonLink() {
+        return buttonLink;
+    }
+
+    public void setButtonLink(String buttonLink) {
+        this.buttonLink = buttonLink;
     }
 }

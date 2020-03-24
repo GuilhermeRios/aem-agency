@@ -1,0 +1,29 @@
+<sly data-sly-use.slider="com.adobe.aem.agency.core.models.SliderCtaModel">
+    <section class="case-study">
+        <div class="container">
+            <div class="case-study--sliders">
+                <div class="case-study--left">
+                    <div class="case-study--left__textslider" data-sly-list.slide="${slider.items}">
+                        <div>
+                            <div class="case-study--left__textslider__image"><i class="fa fa-lightbulb-o"
+                                                                                aria-hidden="true"></i></div>
+                            <h4>${slide.title}</h4>
+                            <p>${slide.content}</p>
+                            <sly data-sly-test="${slide.showButton}">
+                                <a href="${slide.buttonLink}" class="button small">${slide.buttonText}</a>
+                            </sly>
+                        </div>
+                    </div>
+                    <div class="case-study--left__dots"></div>
+                </div>
+                <div class="case-study--right">
+                    <div class="case-study--right__imageslider" data-sly-list.slide="${slider.items}">
+                        <div>
+                            <img src="${slide.background}" alt="${slide.title}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</sly>
