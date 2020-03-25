@@ -1,0 +1,16 @@
+<sly data-sly-use.partners="com.adobe.aem.agency.core.models.SectionPartnersModel">
+    <section class="partners">
+        <div class="container">
+            <h2 data-sly-test="${partners.title}">${partners.title}</h2>
+            <p data-sly-test="${partners.text}">${partners.text @ context='html'}</p>
+            <span class="dot-dash dark" data-sly-test="${partners.title || partners.text}">.</span>
+            <div class="partners--container" data-sly-list.partner="${partners.items.listIterator}">
+                <div class="partners--item">
+                    <a class="partners--item__image" href="${partner.path}">
+                        <img src="${partner.image}" alt="${partner.altText}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</sly>
