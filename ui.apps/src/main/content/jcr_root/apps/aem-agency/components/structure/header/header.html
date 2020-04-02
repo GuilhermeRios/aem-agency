@@ -1,0 +1,17 @@
+<sly data-sly-use.header="com.adobe.aem.agency.core.models.HeaderModel">
+    <header style="${(wcmmode.edit || wcmmode.preview) ? 'position:static; background-color:black' : '' @context='styleString'}">
+        <div class="container">
+            <div class="logo">
+                <a href="${header.logoPath}"><img src="${header.logo}" alt="${header.alt}"/></a>
+            </div>
+            <div class="menu">
+                <ul data-sly-list.item="${header.items.listIterator}">
+                    <li><a href="${item.path}"
+                           class="${(currentPage.path == item.path) ? 'active' : '' @context='attribute'}">${item.title}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+</sly>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Properties"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                          maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <logo jcr:primaryType="nt:unstructured"
+                                  jcr:title="Logo"
+                                  sling:resourceType="granite/ui/components/coral/foundation/container"
+                                  margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <image jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                           autoStart="{Boolean}false"
+                                           class="cq-droptarget"
+                                           fileNameParameter="./imageName"
+                                           fileReferenceParameter="./imageReference"
+                                           mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                           multiple="{Boolean}false"
+                                           name="./image"
+                                           title="Upload Asset"
+                                           uploadUrl="${suffix.path}"
+                                           useHTML5="{Boolean}true"/>
+                                    <path jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                          fieldLabel="Path"
+                                          rootPath="/content/aem-agency/"
+                                          name="./path"/>
+                                    <alt jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                          fieldLabel="Image alt"
+                                          rootPath="/content/aem-agency/"
+                                          name="./alt"/>
+                                </items>
+                            </logo>
+                            <menuItems jcr:primaryType="nt:unstructured"
+                                       jcr:title="Items"
+                                       sling:resourceType="granite/ui/components/coral/foundation/container"
+                                       margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <links jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                           fieldDescription="Click 'Add new' to add a new Slide"
+                                           granite:class="editor-multifield-container-gray"
+                                           composite="{Boolean}true">
+                                        <field jcr:primaryType="nt:unstructured"
+                                               sling:resourceType="granite/ui/components/coral/foundation/container"
+                                               margin="{Boolean}true"
+                                               name="./links">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title jcr:primaryType="nt:unstructured"
+                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                       fieldLabel="Title"
+                                                       name="./title"/>
+                                                <path jcr:primaryType="nt:unstructured"
+                                                      sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                      fieldLabel="Path"
+                                                      rootPath="/content/aem-agency/"
+                                                      name="./path"/>
+                                            </items>
+                                        </field>
+                                    </links>
+                                </items>
+                            </menuItems>
+                        </items>
+                    </tabs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
